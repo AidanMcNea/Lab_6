@@ -13,6 +13,9 @@ import {
   Link
 } from "react-router-dom";
 
+// switch goes onto different urls in the one single page application
+// router must be warpped around all html
+//    /.. goes exports from my components pages like content etc
 //gets from component
 class App extends Component{
 
