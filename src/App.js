@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react'; //impotred 
-import { Header } from './components/header'; // from components folder
-import { Footer } from './components/footer'; // from components folder
+import Create  from './components/create'; // from components folder
+import  Read  from './components/read'; // from components folder
 import { Content } from './components/content.js'; // from components folder
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap styling css 
 import { Navbar , Nav} from 'react-bootstrap'; // navbar blue from bootsrap
@@ -28,22 +28,22 @@ class App extends Component{
 
        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
        <Nav className="me-auto">
-         <Nav.Link href="/header">Header</Nav.Link>
          <Nav.Link href="/content">Content</Nav.Link>
-        <Nav.Link href="/footer">Footer</Nav.Link>
+         <Nav.Link href="/read">Read</Nav.Link>
+         <Nav.Link href="/create">Create</Nav.Link>
         </Nav>
 
        </Navbar>
 
        <Switch> 
-          <Route path="/header">
-            <Header />
-          </Route>
           <Route path="/content">
             <Content />
           </Route>
-          <Route path="/footer">
-            <Footer />
+          <Route path="/read">
+            <Read />
+          </Route>
+          <Route path="/create">
+            <Create />
           </Route>
         </Switch>
         
