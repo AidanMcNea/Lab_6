@@ -4,7 +4,7 @@ import axios from 'axios';
 
 class Read extends Component {
     componentDidMount() {    //method runs after component output rendered to DOM
-        axios.get('https://jsonblob.com/api/jsonblob/894944504570986496') // assigned component state calls http
+        axios.get('http://localhost:4000/api/movies') // assigned component state calls http
             .then((response) => {
                 this.setState({ mymovies: response.data.movies })
             })

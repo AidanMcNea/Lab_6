@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component } from "react";
 
 
@@ -18,6 +19,19 @@ class Create extends Component {
     //Events for creating
     handleSubmit(event) {
         console.log(" |Name: " + this.state.Title + " |Year: " + this.state.Year + " |Poster: " + this.state.Poster);
+
+        const NewMovie = {
+            Title:this.state.Title,
+            Year:this.state.Year,
+            Poster:this.state.Poster
+        };
+
+        axios.post('http://localhost:4000/api/movies', NewMovie)
+        .then((data)=>{
+            console.log(data)
+        })
+
+        
         event.preventDefault();
     }
 
